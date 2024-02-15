@@ -1,0 +1,48 @@
+.c-card {
+    width: 300px;
+    margin: 50px;
+    border: 2px solid #cfcfcf;
+
+    &:has(.c-card__checkbox:checked) {
+        p {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__body {
+        padding: 8px;
+    }
+    
+    &__image {
+        width: 100%;
+    }
+    &__checkbox {
+        display: none;
+        & ~ label .c-card__infoToggle {
+            rotate: 90deg;
+        }
+        &:checked ~ label .c-card__infoToggle {
+            rotate: 270deg;
+        }
+    }
+    &__info {
+        height: 25px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__infoTitle {
+        display: flex;
+        gap: 10px;
+    }
+    &__infoImage,
+    &__infoText,
+    &__infoToggle {
+        display: flex;
+        align-items: center;
+        margin: 0;
+    }
+    p {
+        display: none;
+    }
+}

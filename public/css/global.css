@@ -1,0 +1,43 @@
+.c-card {
+  width: 300px;
+  margin: 50px;
+  border: 2px solid #cfcfcf;
+}
+.c-card:has(.c-card__checkbox:checked) p {
+  display: flex;
+  align-items: center;
+}
+.c-card__body {
+  padding: 8px;
+}
+.c-card__image {
+  width: 100%;
+}
+.c-card__checkbox {
+  display: none;
+}
+.c-card__checkbox ~ label .c-card__infoToggle {
+  rotate: 90deg;
+}
+.c-card__checkbox:checked ~ label .c-card__infoToggle {
+  rotate: 270deg;
+}
+.c-card__info {
+  height: 25px;
+  display: flex;
+  justify-content: space-between;
+}
+.c-card__infoTitle {
+  display: flex;
+  gap: 10px;
+}
+.c-card__infoImage, .c-card__infoText, .c-card__infoToggle {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+.c-card p {
+  display: none;
+}
+
+/*# sourceMappingURL=global.css.map */
